@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DocumentationFile>TokenBlackListExample.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.36" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.2.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MasterNeverDown.CommonResponse\MasterNeverDown.CommonResponse.csproj" />
+      <ProjectReference Include="..\MasterNeverDown.LoginLimit\MasterNeverDown.LoginLimit.csproj" />
+      <ProjectReference Include="..\MasterNeverDown.TokenBlackList\MasterNeverDown.TokenBlackList.csproj" />
+    </ItemGroup>
+
+</Project>

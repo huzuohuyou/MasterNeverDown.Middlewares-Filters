@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Title>CommonResponse</Title>
+        <!--包名-->
+        <PackageId>MasterNeverDown.CommonResponse</PackageId>
+        <!--版本-->
+        <Version>3.0.2</Version>
+        <!--作者-->
+        <Authors>MasterNeverDown</Authors>
+        <!--公司-->
+        <Company>MasterNeverDown</Company>
+        <!--生成自动构建-->
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageProjectUrl>...</PackageProjectUrl>
+        <PackageTags>common response,net core,middleware,filter</PackageTags>
+        <Description>
+            - CommonResponseMiddleware
+            CommonResponseMiddleware is a middleware component in an ASP.NET Core application that formats the HTTP response. It ensures that the response is in a consistent format, typically JSON, and includes a status code and message indicating the result of the request.
+            - ShitHappenedMiddleware
+            ShitHappenedMiddleware is a middleware component in an ASP.NET Core application that handles exceptions and ensures that the response is consistently structured, typically including a status code and a message indicating an error.
+        </Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="licenses\LICENSE.txt" Pack="true" PackagePath=""/>
+        <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="licenses\LICENSE.txt">
+            <Pack>true</Pack>
+        </None>
+        <None Update="README.md">
+            <Pack>true</Pack>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5"/>
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0"/>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Title>TokenBlackList</Title>
+        <!--包名-->
+        <PackageId>MasterNeverDown.TokenBlackList</PackageId>
+        <!--版本-->
+        <Version>3.0.2</Version>
+        <!--作者-->
+        <Authors>MasterNeverDown</Authors>
+        <!--公司-->
+        <Company>MasterNeverDown</Company>
+        <!--生成自动构建-->
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageProjectUrl>...</PackageProjectUrl>
+        <PackageTags>token,balcklist,format response,exception,middleware,filter</PackageTags>
+        <Description>
+            - LogoutFilter
+            The LogoutFilter class is a filter in an ASP.NET Core application that intercepts requests to the logout endpoint and invalidates the user's token. This filter is useful for implementing logout functionality by invalidating the user's token upon logout.
+            - TokenBlackListMiddleware
+            The TokenBlackListMiddleware class is responsible for checking if a token is blacklisted and preventing access if it is. It also provides a method to blacklist tokens for a specified duration. This middleware is useful for implementing logout functionality by blacklisting tokens upon logout.
+        </Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="licenses\LICENSE.txt" Pack="true" PackagePath=""/>
+        <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5"/>
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0"/>
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.2.1"/>
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.2.1"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <Folder Include="licenses\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+            <HintPath>..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.35\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+            <HintPath>..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.35\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+            <HintPath>..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.35\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>

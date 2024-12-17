@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TokenBlackListExample</name>
+    </assembly>
+    <members>
+        <member name="T:TokenBlackListExample.Controllers.AccountController">
+            <summary>
+            Controller for handling account-related actions such as login and logout.
+            </summary>
+        </member>
+        <member name="M:TokenBlackListExample.Controllers.AccountController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TokenBlackListExample.Controllers.AccountController"/> class.
+            </summary>
+            <param name="configuration">The configuration settings.</param>
+        </member>
+        <member name="M:TokenBlackListExample.Controllers.AccountController.Login(TokenBlackListExample.Controllers.LoginModel)">
+            <summary>
+            Authenticates the user and generates a JWT token if the credentials are valid.
+            </summary>
+            <param name="login">The login model containing username and password.</param>
+            <returns>Returns an Ok result with the token if successful, otherwise Unauthorized.</returns>
+        </member>
+        <member name="M:TokenBlackListExample.Controllers.AccountController.Logout(System.String)">
+            <summary>
+            Logs out the user by invalidating the provided JWT token.
+            </summary>
+            <param name="authorization">The authorization header containing the JWT token.</param>
+            <returns>Returns Ok if successful, otherwise BadRequest.</returns>
+        </member>
+        <member name="M:TokenBlackListExample.Controllers.AccountController.Login2(TokenBlackListExample.Controllers.LoginModel)">
+            <summary>
+            Authenticates the user and generates a JWT token if the credentials are valid.
+            This action uses a custom login limit filter.
+            </summary>
+            <param name="login">The login model containing username and password.</param>
+            <returns>Returns an Ok result with the token if successful, otherwise Unauthorized.</returns>
+        </member>
+        <member name="M:TokenBlackListExample.Controllers.AccountController.Logout2(System.String)">
+            <summary>
+            Logs out the user by invalidating the provided JWT token.
+            This action uses a custom logout filter.
+            </summary>
+            <param name="authorization">The authorization header containing the JWT token.</param>
+            <returns>Returns Ok if successful, otherwise BadRequest.</returns>
+        </member>
+        <member name="M:TokenBlackListExample.Controllers.AccountController.IsValidUser(TokenBlackListExample.Controllers.LoginModel)">
+            <summary>
+            Validates the user credentials.
+            </summary>
+            <param name="login">The login model containing username and password.</param>
+            <returns>Returns true if the credentials are valid, otherwise false.</returns>
+        </member>
+        <member name="M:TokenBlackListExample.Controllers.AccountController.GenerateJwtToken">
+            <summary>
+            Generates a JWT token for the authenticated user.
+            </summary>
+            <returns>Returns the generated JWT token as a string.</returns>
+        </member>
+        <member name="T:TokenBlackListExample.Controllers.LoginModel">
+            <summary>
+            Model representing the login credentials.
+            </summary>
+        </member>
+        <member name="P:TokenBlackListExample.Controllers.LoginModel.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <example>test</example>
+        </member>
+        <member name="P:TokenBlackListExample.Controllers.LoginModel.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <example>password</example>
+        </member>
+    </members>
+</doc>

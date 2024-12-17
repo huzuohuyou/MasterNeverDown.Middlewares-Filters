@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Title>LoginLimit</Title>
+        <!--包名-->
+        <PackageId>MasterNeverDown.LoginLimit</PackageId>
+        <!--版本-->
+        <Version>3.0.2</Version>
+        <!--作者-->
+        <Authors>MasterNeverDown</Authors>
+        <!--公司-->
+        <Company>MasterNeverDown</Company>
+        <!--生成自动构建-->
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageProjectUrl>...</PackageProjectUrl>
+        <PackageTags>login limit,net core,middleware,filter</PackageTags>
+        <Description>
+            - LoginLimitFilter
+            The LoginLimitFilter class is a filter in an ASP.NET Core application that intercepts requests to the login endpoint and limits the number of login attempts. This filter is useful for preventing brute force attacks by limiting the number of failed login attempts.
+            - LoginLimitMiddleware
+            The LoginLimitMiddleware class is a middleware component in an ASP.NET Core application that limits login attempts and locks out users after a certain number of failed attempts.
+        </Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="licenses\LICENSE.txt" Pack="true" PackagePath=""/>
+        <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="licenses\LICENSE.txt">
+            <Pack>true</Pack>
+            <PackagePath></PackagePath>
+        </None>
+        <None Update="README.md">
+            <Pack>true</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+            <HintPath>..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.36\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5"/>
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="9.0.0"/>
+    </ItemGroup>
+
+</Project>
